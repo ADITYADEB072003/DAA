@@ -1,0 +1,10 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/adityadebchowdhury/Desktop/Desktop - Aditya’s MacBook Air/PROGRAMMING 2/DAA/Class/output/liner-binary"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _linear, symObjAddr: 0x0, symBinAddr: 0x1000039B4, symSize: 0xC0 }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _linear, symObjAddr: 0x0, symBinAddr: 0x1000039B4, symSize: 0xC0 }
+  - { offsetInCU: 0xAD, offset: 0xAD, size: 0x8, addend: 0x0, symName: _insertion, symObjAddr: 0xC0, symBinAddr: 0x100003A74, symSize: 0xF4 }
+  - { offsetInCU: 0x125, offset: 0x125, size: 0x8, addend: 0x0, symName: _binary, symObjAddr: 0x1B4, symBinAddr: 0x100003B68, symSize: 0x110 }
+  - { offsetInCU: 0x193, offset: 0x193, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x2C4, symBinAddr: 0x100003C78, symSize: 0x234 }
+...
