@@ -1,0 +1,9 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/adityadebchowdhury/Desktop/Desktop - Aditya’s MacBook Air/PROGRAMMING 2/DAA/Class/output/merge"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _merge, symObjAddr: 0x0, symBinAddr: 0x1000039BC, symSize: 0x1A8 }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _merge, symObjAddr: 0x0, symBinAddr: 0x1000039BC, symSize: 0x1A8 }
+  - { offsetInCU: 0xD3, offset: 0xD3, size: 0x8, addend: 0x0, symName: _merge_sort, symObjAddr: 0x1A8, symBinAddr: 0x100003B64, symSize: 0x170 }
+  - { offsetInCU: 0x167, offset: 0x167, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x318, symBinAddr: 0x100003CD4, symSize: 0x248 }
+...

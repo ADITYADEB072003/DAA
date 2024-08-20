@@ -11,9 +11,10 @@ void insertionSort(int arr[], int n) {
         // to one position ahead of their current position
         while (j >= 0 && arr[j] > key) {
             arr[j + 1] = arr[j];
+             arr[j] = key;
             j = j - 1;
         }
-        arr[j + 1] = key;
+       
     }
 }
 int main() {
