@@ -41,7 +41,7 @@ void quick_sort(int* arr, int low, int high) {
 }
 
 int main() {
-    int arr[] = {10, 7, 8, 9, 1, 5};
+    int arr[] =  {65,70,75,80,85,60,55,50,45};
     int size = sizeof(arr) / sizeof(arr[0]);
 
     printf("Original array: ");
