@@ -1,0 +1,9 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/adityadebchowdhury/Desktop/Desktop - Aditya’s MacBook Air/PROGRAMMING 2/DAA/Class/strassen/output/strassen2"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _strassen2x2, symObjAddr: 0x0, symBinAddr: 0x100003B24, symSize: 0x1A8 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _strassen2x2, symObjAddr: 0x0, symBinAddr: 0x100003B24, symSize: 0x1A8 }
+  - { offsetInCU: 0x158, offset: 0x158, size: 0x8, addend: 0x0, symName: _printMatrix, symObjAddr: 0x1A8, symBinAddr: 0x100003CCC, symSize: 0xB4 }
+  - { offsetInCU: 0x1B4, offset: 0x1B4, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x25C, symBinAddr: 0x100003D80, symSize: 0x1A4 }
+...
