@@ -11,6 +11,7 @@ void strassen2x2(int A[2][2], int B[2][2], int C[2][2]) {
     int a12 = A[0][1];
     int a21 = A[1][0];
     int a22 = A[1][1];
+    ///////////////////////////
     int b11 = B[0][0];
     int b12 = B[0][1];
     int b21 = B[1][0];
