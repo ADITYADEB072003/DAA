@@ -47,8 +47,8 @@ int main() {
     printf("Edges in Minimum Cost Spanning Tree:\n");
 
     // Sorting edges based on their weights (Selection sort used for simplicity)
-    for (int i = 0; i < 5; i++) {
-        for (int j = i + 1; j < 5; j++) {
+    for (int i = 0; i < n+1; i++) {
+        for (int j = i + 1; j < n+1; j++) {
             if (edges[i].weight > edges[j].weight) {
                 Edge temp = edges[i];
                 edges[i] = edges[j];
@@ -56,9 +56,22 @@ int main() {
             }
         }
     }
+// //insertion sort
+//  // Sorting edges based on their weights using insertion sort
+//     for (int i = 1; i < n+1; i++) {
+//         Edge key = edges[i];
+//         int j = i - 1;
 
+//         // Move elements of edges[0..i-1] that are greater than key
+//         // to one position ahead of their current position
+//         while (j >= 0 && edges[j].weight > key.weight) {
+//             edges[j + 1] = edges[j];
+//             j--;
+//         }
+//         edges[j + 1] = key;
+//     }
     // Process edges in sorted order
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < n+1; i++) {
         a = applyfind(edges[i].src);
         b = applyfind(edges[i].dest);
 

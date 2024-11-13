@@ -31,8 +31,8 @@ void prim(int g[vertices][vertices]) {
     }
 
     // Always include the first 1st vertex in MST.
-    min_key[0] = 0; // Mamin_keye min_keyey 0 so that this vertex is picmin_keyed as first vertex
-    parent[0] = -1; // First node is always root of MST
+   min_key[0] = 0; // Mamin_keye min_keyey 0 so that this vertex is picmin_keyed as first vertex
+   parent[0] = -1; // First node is always root of MST
 
     // The MST will have vertices-1 edges
     for (count = 0; count < vertices - 1; count++) {
