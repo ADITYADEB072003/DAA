@@ -33,7 +33,7 @@ void quick_sort(int* arr, int low, int high) {
     if (low < high) {
         // Partition the array and get the pivot index
         int pivot_index = partition(arr, low, high);
-printf(" pivot:-%d \n",pivot_index);
+
         // Recursively sort elements before and after the partition
         quick_sort(arr, low, pivot_index - 1);
         quick_sort(arr, pivot_index + 1, high);

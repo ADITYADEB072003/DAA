@@ -20,7 +20,7 @@ Edge edges[MAX_EDGES] = {
     {2, 4, 7}
 };
 
-int p[5]; // Parent array for union-find
+int p[4]; // Parent array for union-find
 
 // Find the root of a node
 int applyfind(int i) {

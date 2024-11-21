@@ -7,7 +7,7 @@ void insertionSort(int arr[], int n) {
 
     // Move elements of arr[0..i-1], that are greater than key,
     // to one position ahead of their current position
-    while (j >= 0 && arr[j] > key) {
+    while (j >= 0 && key<arr[j]) {
       arr[j + 1] = arr[j];
       j = j - 1;
     }
@@ -23,7 +23,7 @@ void printArray(int arr[], int n) {
 }
 
 int main() {
-  int arr[] = {5, 2, 4, 6, 1, 3};
+  int arr[] = { 12, 31, 25, 8, 32, 17 };  
   int n = sizeof(arr) / sizeof(arr[0]);
 
   insertionSort(arr, n);

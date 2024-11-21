@@ -18,7 +18,7 @@ void merge(int *left,int left_size,int *right,int right_size,int *result){
          
      }
     while(j<right_size){
-     result[k++]=left[j++];
+     result[k++]=right[j++];
          
      }
     
@@ -38,9 +38,18 @@ void merge_sort(int *arr,int size){
         right[i-mid]=arr[i];
     }
     merge_sort(left,mid);
-    merge_sort(right,mid-size);
+    merge_sort(right,size-mid);
     
-    merge(left,mid,right,mid-size,arr); 
+    merge(left,mid,right,size-mid,arr); 
+    free(left);  // Free allocated memory
+    free(right); //
+}
+void printArray(int A[], int size)
+{
+    int i;
+    for (i = 0; i < size; i++)
+        printf("%d ", A[i]);
+    printf("\n");
 }
 int main() {
  
@@ -63,5 +72,16 @@ for (int i = 0; i < n; i++) {
         printf("%d ", arr[i]);
     }
     printf("\n");
+int arr1[] = { 12, 11, 13, 5, 6, 7 };
+    int arr_size = sizeof(arr1) / sizeof(arr1[0]);
+
+    printf("Given array is \n");
+    printArray(arr1, arr_size);
+
+    merge_sort(arr1, arr_size);
+
+    printf("\nSorted array is \n");
+    printArray(arr1, arr_size);
+    return 0;
 }
    

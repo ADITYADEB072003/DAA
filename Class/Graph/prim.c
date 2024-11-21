@@ -16,7 +16,7 @@ int minimum_min_keyey(int min_key[], int mst[]) {
     return min_index;
 }
 
-
+ 
 // Function to construct and print the MST using Prim's algorithm
 void prim(int g[vertices][vertices]) {
     int parent[vertices]; // Array to store the MST
