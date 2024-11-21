@@ -9,22 +9,27 @@ typedef struct {
     int src, dest, weight;
 } Edge;
 
+// Input edges
 Edge edges[MAX_EDGES] = {
-    {0, 1, 10},
-    {0, 2, 6},
-    {0, 3, 5},
-    {1, 3, 15},
-    {2, 3, 4}
+    {0, 1, 4},
+    {0, 2, 4},
+    {1, 2, 2},
+    {1, 3, 6},
+    {2, 3, 8},
+    {3, 4, 9},
+    {2, 4, 7}
 };
 
-int p[4]; // Parent array for union-find
+int p[5]; // Parent array for union-find
 
+// Find the root of a node
 int applyfind(int i) {
     while (p[i] != -1) // Updated to -1 for better initialization check
         i = p[i];
     return i;
 }
 
+// Union operation for two sets
 int applyunion(int i, int j) {
     if (i != j) {
         p[j] = i; // Attach one tree under another
@@ -34,10 +39,11 @@ int applyunion(int i, int j) {
 }
 
 int main() {
-    int n = 4;  // Number of vertices (0 to 3)
+    int n = 5;  // Number of vertices (0 to 4)
     int ne = 0; // Number of edges in MST
     int mincost = 0; // Minimum cost of MST
     int a, b;
+    int numEdges = 7; // Total number of edges
 
     // Initialize union-find parent array
     for (int i = 0; i < n; i++) {
@@ -47,8 +53,8 @@ int main() {
     printf("Edges in Minimum Cost Spanning Tree:\n");
 
     // Sorting edges based on their weights (Selection sort used for simplicity)
-    for (int i = 0; i < n+1; i++) {
-        for (int j = i + 1; j < n+1; j++) {
+    for (int i = 0; i < numEdges; i++) {
+        for (int j = i + 1; j < numEdges; j++) {
             if (edges[i].weight > edges[j].weight) {
                 Edge temp = edges[i];
                 edges[i] = edges[j];
@@ -56,22 +62,9 @@ int main() {
             }
         }
     }
-// //insertion sort
-//  // Sorting edges based on their weights using insertion sort
-//     for (int i = 1; i < n+1; i++) {
-//         Edge key = edges[i];
-//         int j = i - 1;
 
-//         // Move elements of edges[0..i-1] that are greater than key
-//         // to one position ahead of their current position
-//         while (j >= 0 && edges[j].weight > key.weight) {
-//             edges[j + 1] = edges[j];
-//             j--;
-//         }
-//         edges[j + 1] = key;
-//     }
     // Process edges in sorted order
-    for (int i = 0; i < n+1; i++) {
+    for (int i = 0; i < numEdges; i++) {
         a = applyfind(edges[i].src);
         b = applyfind(edges[i].dest);
 
@@ -88,4 +81,3 @@ int main() {
     printf("Minimum cost = %d\n", mincost);
     return 0;
 }
-
