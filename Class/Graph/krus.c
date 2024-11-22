@@ -3,6 +3,8 @@
 #include <limits.h>
 
 #define MAX_EDGES 10
+#define n 5  // Number of vertices (0 to 4)
+#define numEdges  7 // Total number of edges
 
 // Structure to represent an edge
 typedef struct {
@@ -20,7 +22,7 @@ Edge edges[MAX_EDGES] = {
     {2, 4, 7}
 };
 
-int p[4]; // Parent array for union-find
+int p[n]; // Parent array for union-find
 
 // Find the root of a node
 int applyfind(int i) {
@@ -39,12 +41,11 @@ int applyunion(int i, int j) {
 }
 
 int main() {
-    int n = 5;  // Number of vertices (0 to 4)
+   
     int ne = 0; // Number of edges in MST
     int mincost = 0; // Minimum cost of MST
     int a, b;
-    int numEdges = 7; // Total number of edges
-
+    
     // Initialize union-find parent array
     for (int i = 0; i < n; i++) {
         p[i] = -1; // Using -1 to indicate no parent
