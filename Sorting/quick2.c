@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 // Function to swap two elements
 void swap(int* a, int* b) {
     int temp = *a;
@@ -41,23 +41,23 @@ void quick_sort(int* arr, int low, int high) {
 }
 
 int main() {
-    int arr[] =  {65, 70, 75, 80, 85, 60, 55, 50, 45};
-    int size = sizeof(arr) / sizeof(arr[0]);
-
+    
+     int n=500000;
+int *arr1 = (int *)malloc(n * sizeof(int));
+for (int i = 0; i < n; i++) {
+        arr1[i] = rand() % 1000000; // Random numbers between 0 and 999999
+    }
     printf("Original array: ");
-    for (int i = 0; i < size; i++) {
-        printf("%d ", arr[i]);
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr1[i]);
     }
     printf("\n");
 
-    // Sort the array using quick sort
-    quick_sort(arr, 0, size - 1);
+    // Sort the array
+    quick_sort(arr1,0,n-1);
 
     printf("Sorted array: ");
-    for (int i = 0; i < size; i++) {
-        printf("%d ", arr[i]);
+    for (int i = 0; i < 30; i++) {
+        printf("%d ", arr1[i]);
     }
-    printf("\n");
-
-    return 0;
 }

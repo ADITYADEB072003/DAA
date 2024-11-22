@@ -28,7 +28,7 @@ void insertionSort(int arr[], int n) {
         key = arr[i];
         j = i - 1;
 
-        while (j >= 0 && arr[j] > key) {
+        while (j >= 0 && arr[j] < key) {
             arr[j + 1] = arr[j];
             j = j - 1;
         }
@@ -41,7 +41,7 @@ void bubbleSort(int arr[], int n) {
     for (int i = 0; i < n - 1; i++) {
         swapped = false;
         for (int j = 0; j < n - i - 1; j++) {
-            if (arr[j] > arr[j + 1]) {
+            if (arr[j] < arr[j + 1]) {
                 int temp = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
@@ -55,7 +55,7 @@ void bubbleSort(int arr[], int n) {
 }
 
 int main() {
-    int n = 250000;
+    int n = 25;
     int *a = (int *)malloc(n * sizeof(int));
 
     if (!a) {
@@ -69,9 +69,11 @@ int main() {
     }
 
     // Uncomment the sorting algorithm you want to use
-    // selectionSort(a, n);   // Very slow for large n
-    // insertionSort(a, n);   // Very slow for large n
-    bubbleSort(a, n);         // Still slow, but slightly better
+    printf("Selection Sort");
+     selectionSort(a, n);
+     printf("Insertion Sort");   // Very slow for large n
+     insertionSort(a, n);   // Very slow for large n
+   bubbleSort(a, n);         // Still slow, but slightly better
 
     // Print only the first few elements for verification
     for (int i = 0; i < 10; i++) {
